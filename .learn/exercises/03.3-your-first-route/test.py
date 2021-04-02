@@ -50,9 +50,9 @@ def test_hello_function(client):
     response = client.get('/todos')
     assert isinstance(response.data, str)
 
-@pytest.mark.it("Endpoint for path '/todos' must return <h1>Hello!</h1>")
+@pytest.mark.it("Endpoint for path '/todos' must return <h1>Hello World!</h1>")
 def test_hello_function(client):
     response = client.get('/todos')
-    assert b'<h1>Hello!</h1>' == response.data
+    assert b'<h1>Hello World!</h1>' == response.data
 
     
